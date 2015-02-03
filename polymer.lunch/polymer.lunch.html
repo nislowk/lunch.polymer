@@ -1,0 +1,41 @@
+
+<template name="layout">
+ <head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <!-- Better non-Chrome browser compatibility TODO: add conditional loading -->
+    <script src="/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="/bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="/bower_components/core-menu/core-menu.html">
+    <link rel="import" href="/bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
+    <link rel="import" href="/bower_components/core-item/core-item.html">
+
+    <link rel="import" href="/bower_components/paper-button/paper-button.html">
+    <link rel="import" href="/bower_components/paper-item/paper-item.html">
+    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/bower_components/paper-slider/paper-slider.html">
+    <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+    <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+     <link rel="import" href="/bower_components/core-pages/core-pages.html">
+    <link rel="import" href="/bower_components/font-roboto/roboto.html">
+ </head>
+    <script></script>
+ <body fullbleed layout vertical>
+  <core-scroll-header-panel flex condenses="true">
+  <core-toolbar>
+    <paper-tabs id="tabs" selected="all" self-end>
+    <paper-tab name="all">All</paper-tab>
+    <paper-tab name="favorites">Favorites</paper-tab>
+  </paper-tabs>
+  </core-toolbar>
+      
+  <core-pages selected="{{selected}}">
+  <div>Page 1</div>
+  <div>Page 2</div>
+  <div>Page 3</div>
+</core-pages>
+
+</core-scroll-header-panel>
+</body>
+</template>
